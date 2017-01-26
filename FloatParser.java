@@ -14,6 +14,7 @@ class FloatParser {
 
  enum StateFloat { S1_INIT, S2, S3_ACCEPT, S4, S5, S6_ACCEPT, S7, S8_ACCEPT };
  enum Sign { POSITIVE, NEGETIVE };
+ enum EPower { E_POSITIVE, E_NEGETIVE, E_DEFAULT };
 
  public static double MyParseFloat(String s) throws Exception {
         // Using the code in DecimalParser.java write a finite state 
@@ -23,10 +24,13 @@ class FloatParser {
     
     StateFloat state = StateFloat.S1_INIT;
     Sign sign = Sign.POSITIVE;
+    EPower ePower = EPower.E_DEFAULT; 
+
 
     int i = 0;
     double divider = 10;
     double value = 0;
+    int e_val = 0;
 
 
     while(i < s.length()) {
@@ -111,9 +115,32 @@ class FloatParser {
             break;
 
             case S5:
+
+            //ePower
+            if(ch == '+') {
+                state = StateFloat.S7;
+                ePower = EPower.E_POSITIVE;
+                i++
+            }
+
+            else if(ch == '-') {
+                state = StateFloat.S7;
+                ePower = EPower.E_NEGETIVE;
+                i++;
+            }
+
+            else if(Character.isDigit(ch)) {
+                state =
+                e_val = Character.getNumericValue(ch);
+                i++;
+            }
+
+            else throw new Exception("Bad format");
+
             break;
 
             case S6_ACCEPT:
+
             break;
 
             case S7:
