@@ -31,6 +31,7 @@ class FloatParser {
     double divider = 10;
     double value = 0;
     int e_val = 0;
+    boolean e_exists = false;
 
 
     while(i < s.length() && state != StateFloat.S_END) {
@@ -96,6 +97,7 @@ class FloatParser {
             }
             else if(ch == 'e' || ch == 'E') {
                 state = StateFloat.S5;
+                e_exists = true;
                 i++;
             }
 
@@ -145,6 +147,7 @@ class FloatParser {
 
             if(ch == 'e' || ch == 'E') {
                 state = StateFloat.S5;
+                e_exists = true;
                 i++;
             }
 
@@ -188,12 +191,13 @@ class FloatParser {
         value *= -1;
     }
 
-    if(ePower != EPower.E_DEFAULT) {
+    if(e_exists == true) {
 
         if(ePower == EPower.E_NEGETIVE) e_val *= -1;
 
         value *= Math.pow(10, e_val);
     }
+
 
     return value;
 
