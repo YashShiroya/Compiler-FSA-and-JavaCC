@@ -130,7 +130,7 @@ class FloatParser {
             }
 
             else if(Character.isDigit(ch)) {
-                state =
+                state = StateFloat.S8_ACCEPT;
                 e_val = Character.getNumericValue(ch);
                 i++;
             }
@@ -140,6 +140,8 @@ class FloatParser {
             break;
 
             case S6_ACCEPT:
+
+            
 
             break;
 
