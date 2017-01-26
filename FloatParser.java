@@ -26,14 +26,14 @@ public static double MyParseFloat(String s) throws Exception {
     double divider = 10;
     double value = 0;
 
-    while(i < s.length) {
+    while(i < s.length()) {
 
         char ch = s.charAt(i);
 
         switch(state) {
 
             case S1_INIT:
-                
+
             break;
             case S2:
             break;
