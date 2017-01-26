@@ -11,7 +11,7 @@ class FloatParser {
    double val = MyParseFloat(args[0]);
    System.out.println("Value="+val);
 }
-
+aa
 enum StateFloat { S1_INIT, S2, S3_ACCEPT, S4, S5, S6_ACCEPT, S7, S8_ACCEPT};
 
 public static double MyParseFloat(String s) throws Exception {
