@@ -46,15 +46,18 @@ class FloatParser {
             else if(ch == '+') { 
                 sign = Sign.POSITIVE;
                 state = StateFloat.S2;
+                i++;
             }
 
             else if(ch == '-') {
                 sign = Sign.NEGETIVE;
                 state = StateFloat.S2;
+                i++;
             }
 
             else if(ch == '.') {
                 state = StateFloat.S4;
+                i++;
             }
 
             else throw new Exception("Bad format");
@@ -65,14 +68,26 @@ class FloatParser {
             if(Character.isDigit(ch)) {
                 state = StateFloat.S3_ACCEPT;
                 value = Character.getNumericValue(ch);
+                i++;
             }
             else if(ch == '.') {
                 state = StateFloat.S4;
+                i++;
             }
 
             break;
 
             case S3_ACCEPT:
+
+            if (Character.isDigit(ch)) {
+                value = 10.0*value + Character.getNumericValue(ch);
+                i++;
+            }
+            else if(ch == '.') {
+                state = StateFloat.S4;
+                i++;
+            }
+
             break;
 
             case S4:
