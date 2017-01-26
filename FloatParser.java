@@ -155,6 +155,15 @@ class FloatParser {
             break;
 
             case S7:
+
+            if(Character.isDigit(ch)) {
+                state = StateFloat.S8_ACCEPT;
+                e_val = Character.getNumericValue(ch);
+                i++;
+            }
+
+            else throw new Exception("Bad format");
+
             break;
 
             case S8_ACCEPT:
