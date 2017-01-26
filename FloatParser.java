@@ -173,7 +173,7 @@ class FloatParser {
             case S8_ACCEPT:
 
             if(Character.isDigit(ch)) {
-                e_val = 10.0*e_val + (int)Character.getNumericValue(ch);
+                e_val = 10*e_val + Character.getNumericValue(ch);
                 i++;
             }
 
