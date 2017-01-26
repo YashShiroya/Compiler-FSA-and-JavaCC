@@ -43,7 +43,19 @@ class FloatParser {
                 i++;
             }
 
-            
+            else if(ch == '+') { 
+                sign = Sign.POSITIVE;
+                state = StateFloat.S2;
+            }
+
+            else if(ch == '-') {
+                sign = Sign.NEGETIVE;
+                state = StateFloat.S2;
+            }
+
+            else if(ch == '.') {
+                state = StateFloat.S4;
+            }
 
             else throw new Exception("Bad format");
             break;
@@ -59,18 +71,25 @@ class FloatParser {
             }
 
             break;
+
             case S3_ACCEPT:
             break;
+
             case S4:
             break;
+
             case S5:
             break;
+
             case S6_ACCEPT:
             break;
+
             case S7:
             break;
+            
             case S8_ACCEPT:
             break;
+
             }
         }
     }
