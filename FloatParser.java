@@ -173,7 +173,7 @@ class FloatParser {
             case S8_ACCEPT:
 
             if(Character.isDigit(ch)) {
-                e_val = 10*e_val + Character.getNumericValue(ch);
+                e_val = 10 * e_val + Character.getNumericValue(ch);
                 i++;
             }
 
@@ -182,6 +182,17 @@ class FloatParser {
             break;
 
         }
+    }
+
+    if(sign == Sign.NEGETIVE) {
+        value *= -1;
+    }
+
+    if(ePower != EPower.E_DEFAULT) {
+
+        if(ePower == EPower.E_NEGETIVE) e_val *= -1;
+
+        value *= Math.pow(10, e_val);
     }
 
     return value;
