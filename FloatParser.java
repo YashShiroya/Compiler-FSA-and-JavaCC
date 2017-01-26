@@ -146,6 +146,12 @@ class FloatParser {
                 i++;
             }
 
+            else if(Character.isDigit(ch)) {
+                value = value + Character.getNumericValue(ch)/divider;
+                divider = divider * 10;
+                i++;
+            }
+
             break;
 
             case S7:
