@@ -167,6 +167,11 @@ class FloatParser {
             break;
 
             case S8_ACCEPT:
+
+            if(Character.isDigit(ch)) {
+                
+            }
+
             break;
 
         }
