@@ -12,7 +12,7 @@ class FloatParser {
     System.out.println("Value="+val);
     }
 
- enum StateFloat { S1_INIT, S2, S3_ACCEPT, S4, S5, S6_ACCEPT, S7, S8_ACCEPT };
+ enum StateFloat { S1_INIT, S2, S3_ACCEPT, S4, S5, S6_ACCEPT, S7, S8_ACCEPT, S_END };
  enum Sign { POSITIVE, NEGETIVE };
  enum EPower { E_POSITIVE, E_NEGETIVE, E_DEFAULT };
 
@@ -33,7 +33,7 @@ class FloatParser {
     int e_val = 0;
 
 
-    while(i < s.length()) {
+    while(i < s.length() && state != StateFloat.S_END) {
 
         char ch = s.charAt(i);
 
@@ -99,6 +99,8 @@ class FloatParser {
                 i++;
             }
 
+            else state = StateFloat.S_END;
+
             break;
 
             case S4:
@@ -152,6 +154,8 @@ class FloatParser {
                 i++;
             }
 
+            else state = StateFloat.S_END;
+
             break;
 
             case S7:
@@ -169,15 +173,18 @@ class FloatParser {
             case S8_ACCEPT:
 
             if(Character.isDigit(ch)) {
-                
+                e_val = 10.0*e_val + Character.getNumericValue(ch);
+                i++;
             }
+
+            else state = StateFloat.S_END;
 
             break;
 
         }
     }
 
-    return 0;
+    return value;
 
 }
 
