@@ -61,6 +61,7 @@ class FloatParser {
             }
 
             else throw new Exception("Bad format");
+
             break;
 
             case S2:
@@ -75,6 +76,8 @@ class FloatParser {
                 i++;
             }
 
+            else throw new Exception("Bad format");
+
             break;
 
             case S3_ACCEPT:
@@ -87,10 +90,24 @@ class FloatParser {
                 state = StateFloat.S4;
                 i++;
             }
+            else if(ch == 'e' || ch == 'E') {
+                state = StateFloat.S5;
+                i++;
+            }
 
             break;
 
             case S4:
+
+            if(Character.isDigit(ch)) {
+                state = StateFloat.S6_ACCEPT;
+                value = value + Character.getNumericValue(ch)/divider;
+                divider = divider * 10;
+                i++;
+            }
+
+            else throw new Exception("Bad format");
+
             break;
 
             case S5:
