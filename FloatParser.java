@@ -34,7 +34,12 @@ public static double MyParseFloat(String s) throws Exception {
 
             case S1_INIT:
 
-            break;
+                if(Character.isDigit(ch)) {
+                    state = StateFloat.S3_ACCEPT;
+                    value = Character.getNumericValue(ch);
+                }
+                break;
+
             case S2:
             break;
             case S3_ACCEPT:
