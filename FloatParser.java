@@ -62,13 +62,7 @@ class FloatParser {
 
             case S2:
 
-            if(Character.isDigit(ch)) {
-                state = StateFloat.S3_ACCEPT;
-                value = Character.getNumericValue(ch);
-            }
-            else if(ch == '.') {
-                state = StateFloat.S4;
-            }
+            
 
             break;
             case S3_ACCEPT:
