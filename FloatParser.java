@@ -120,7 +120,7 @@ class FloatParser {
             if(ch == '+') {
                 state = StateFloat.S7;
                 ePower = EPower.E_POSITIVE;
-                i++
+                i++;
             }
 
             else if(ch == '-') {
@@ -141,7 +141,10 @@ class FloatParser {
 
             case S6_ACCEPT:
 
-            
+            if(ch == 'e' || ch == 'E') {
+                state = StateFloat.S5;
+                i++;
+            }
 
             break;
 
