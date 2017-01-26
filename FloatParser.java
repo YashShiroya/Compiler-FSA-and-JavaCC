@@ -35,8 +35,7 @@ class FloatParser {
 
         switch(state) {
 
-            
-
+        
             case S3_ACCEPT:
             break;
 
