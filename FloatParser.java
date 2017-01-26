@@ -54,7 +54,7 @@ class FloatParser {
             case S8_ACCEPT:
             break;
 
-            }
+            
         }
     }
 
