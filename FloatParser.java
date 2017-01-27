@@ -61,8 +61,9 @@ class FloatParser {
             }
 
             else if(ch == '.') {
-                state = StateFloat.S4;
-                i++;
+                // state = StateFloat.S4;
+                // i++;
+                throw new Exception("Bad format");
             }
 
             else throw new Exception("Bad format");
