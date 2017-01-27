@@ -61,9 +61,8 @@ class FloatParser {
             }
 
             else if(ch == '.') {
-                // state = StateFloat.S4;
-                // i++;
-                throw new Exception("Bad format");
+                state = StateFloat.S4;
+                i++;
             }
 
             else throw new Exception("Bad format");
@@ -102,7 +101,8 @@ class FloatParser {
                 i++;
             }
 
-            else state = StateFloat.S_END;
+            //else state = StateFloat.S_END;
+            else throw new Exception("Bad format");
 
             break;
 
@@ -158,7 +158,8 @@ class FloatParser {
                 i++;
             }
 
-            else state = StateFloat.S_END;
+            //else state = StateFloat.S_END;
+            else throw new Exception("Bad format");
 
             break;
 
@@ -181,7 +182,8 @@ class FloatParser {
                 i++;
             }
 
-            else state = StateFloat.S_END;
+            //else state = StateFloat.S_END;
+            else throw new Exception("Bad format");
 
             break;
 
@@ -198,7 +200,6 @@ class FloatParser {
 
         value *= Math.pow(10, e_val);
     }
-
 
     return value;
 
