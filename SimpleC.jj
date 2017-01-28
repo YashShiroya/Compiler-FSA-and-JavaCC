@@ -28,6 +28,7 @@ TOKEN :
 {
   <LPARENT: "(">
 | <RPARENT: ")">
+| <LETTER: (["A"-"Z"]|["a"-"z"]) >
 }
 
 

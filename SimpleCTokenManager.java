@@ -8,6 +8,16 @@
   public static  java.io.PrintStream debugStream = System.out;
   /** Set debug output. */
   public static  void setDebugStream(java.io.PrintStream ds) { debugStream = ds; }
+private static final int jjStopStringLiteralDfa_0(int pos, long active0){
+   switch (pos)
+   {
+      default :
+         return -1;
+   }
+}
+private static final int jjStartNfa_0(int pos, long active0){
+   return jjMoveNfa_0(jjStopStringLiteralDfa_0(pos, active0), pos + 1);
+}
 static private int jjStopAtPos(int pos, int kind)
 {
    jjmatchedKind = kind;
@@ -18,19 +28,104 @@ static private int jjMoveStringLiteralDfa0_0(){
    switch(curChar)
    {
       case 40:
-         return jjStopAtPos(0, 6);
-      case 41:
          return jjStopAtPos(0, 7);
+      case 41:
+         return jjStopAtPos(0, 8);
       default :
-         return 1;
+         return jjMoveNfa_0(3, 0);
+   }
+}
+static final long[] jjbitVec0 = {
+   0x0L, 0x0L, 0xffffffffffffffffL, 0xffffffffffffffffL
+};
+static private int jjMoveNfa_0(int startState, int curPos)
+{
+   int startsAt = 0;
+   jjnewStateCnt = 4;
+   int i = 1;
+   jjstateSet[0] = startState;
+   int kind = 0x7fffffff;
+   for (;;)
+   {
+      if (++jjround == 0x7fffffff)
+         ReInitRounds();
+      if (curChar < 64)
+      {
+         long l = 1L << curChar;
+         do
+         {
+            switch(jjstateSet[--i])
+            {
+               case 0:
+                  if (curChar == 47)
+                     { jjCheckNAddTwoStates(1, 2); }
+                  break;
+               case 1:
+                  if ((0xffffffffffffdbffL & l) != 0L)
+                     { jjCheckNAddTwoStates(1, 2); }
+                  break;
+               case 2:
+                  if ((0x2400L & l) != 0L)
+                     kind = 6;
+                  break;
+               case 3:
+                  if (curChar == 47)
+                     jjstateSet[jjnewStateCnt++] = 0;
+                  break;
+               default : break;
+            }
+         } while(i != startsAt);
+      }
+      else if (curChar < 128)
+      {
+         long l = 1L << (curChar & 077);
+         do
+         {
+            switch(jjstateSet[--i])
+            {
+               case 1:
+                  { jjAddStates(0, 1); }
+                  break;
+               default : break;
+            }
+         } while(i != startsAt);
+      }
+      else
+      {
+         int i2 = (curChar & 0xff) >> 6;
+         long l2 = 1L << (curChar & 077);
+         do
+         {
+            switch(jjstateSet[--i])
+            {
+               case 1:
+                  if ((jjbitVec0[i2] & l2) != 0L)
+                     { jjAddStates(0, 1); }
+                  break;
+               default : break;
+            }
+         } while(i != startsAt);
+      }
+      if (kind != 0x7fffffff)
+      {
+         jjmatchedKind = kind;
+         jjmatchedPos = curPos;
+         kind = 0x7fffffff;
+      }
+      ++curPos;
+      if ((i = jjnewStateCnt) == (startsAt = 4 - (jjnewStateCnt = startsAt)))
+         return curPos;
+      try { curChar = input_stream.readChar(); }
+      catch(java.io.IOException e) { return curPos; }
    }
 }
 static final int[] jjnextStates = {
+   1, 2, 
 };
 
 /** Token literal values. */
 public static final String[] jjstrLiteralImages = {
-"", null, null, null, null, null, "\50", "\51", };
+"", null, null, null, null, null, null, "\50", "\51", };
 static protected Token jjFillToken()
 {
    final Token t;
@@ -176,7 +271,7 @@ static private void jjCheckNAddTwoStates(int state1, int state2)
   {
     int i;
     jjround = 0x80000001;
-    for (i = 0; i-- > 0;)
+    for (i = 4; i-- > 0;)
       jjrounds[i] = 0x80000000;
   }
 
@@ -201,15 +296,15 @@ public static final String[] lexStateNames = {
    "DEFAULT",
 };
 static final long[] jjtoToken = {
-   0xc1L, 
+   0x181L, 
 };
 static final long[] jjtoSkip = {
-   0x3eL, 
+   0x7eL, 
 };
     static protected SimpleCharStream  input_stream;
 
-    static private final int[] jjrounds = new int[0];
-    static private final int[] jjstateSet = new int[2 * 0];
+    static private final int[] jjrounds = new int[4];
+    static private final int[] jjstateSet = new int[2 * 4];
 
     
     static protected char curChar;
