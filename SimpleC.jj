@@ -21,7 +21,6 @@ SKIP :
 | "\n"
 | "\r"
 | "\f"
-aasas
 }
 
 TOKEN :
