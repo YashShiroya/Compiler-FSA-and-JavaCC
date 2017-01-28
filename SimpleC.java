@@ -67,7 +67,7 @@ System.out.println("RPARENT, \u005c""+t.image+"\u005c"" ); count++;
       jj_la1_init_0();
    }
    private static void jj_la1_init_0() {
-      jj_la1_0 = new int[] {0x60,0x60,};
+      jj_la1_0 = new int[] {0xc0,0xc0,};
    }
 
   /** Constructor with InputStream. */
@@ -205,7 +205,7 @@ System.out.println("RPARENT, \u005c""+t.image+"\u005c"" ); count++;
   /** Generate ParseException. */
   static public ParseException generateParseException() {
     jj_expentries.clear();
-    boolean[] la1tokens = new boolean[7];
+    boolean[] la1tokens = new boolean[8];
     if (jj_kind >= 0) {
       la1tokens[jj_kind] = true;
       jj_kind = -1;
@@ -219,7 +219,7 @@ System.out.println("RPARENT, \u005c""+t.image+"\u005c"" ); count++;
         }
       }
     }
-    for (int i = 0; i < 7; i++) {
+    for (int i = 0; i < 8; i++) {
       if (la1tokens[i]) {
         jj_expentry = new int[1];
         jj_expentry[0] = i;
