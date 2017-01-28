@@ -13,7 +13,11 @@ public interface SimpleCConstants {
   /** RegularExpression Id. */
   int RPARENT = 8;
   /** RegularExpression Id. */
-  int LETTER = 9;
+  int ID = 9;
+  /** RegularExpression Id. */
+  int LETTER = 10;
+  /** RegularExpression Id. */
+  int DIGIT = 11;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -29,7 +33,9 @@ public interface SimpleCConstants {
     "<token of kind 6>",
     "\"(\"",
     "\")\"",
+    "<ID>",
     "<LETTER>",
+    "<DIGIT>",
   };
 
 }
