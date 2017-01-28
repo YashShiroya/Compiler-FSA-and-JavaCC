@@ -32,6 +32,8 @@ class FloatParser {
     double value = 0;
     int e_val = 0;
     boolean e_exists = false;
+    StateFloat state_prev = StateFloat.S1_INIT;
+    int s_len = s.length();
 
 
     while(i < s.length() && state != StateFloat.S_END) {
@@ -86,6 +88,8 @@ class FloatParser {
             break;
 
             case S3_ACCEPT:
+
+            state_prev = StateFloat.S3_ACCEPT;
 
             if (Character.isDigit(ch)) {
                 value = 10.0*value + Character.getNumericValue(ch);
