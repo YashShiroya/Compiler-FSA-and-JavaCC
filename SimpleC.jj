@@ -28,7 +28,8 @@ TOKEN :
 {
   <LPARENT: "(">
 | <RPARENT: ")">
-| <LETTER: (["A"-"Z"]|["a"-"z"]) >
+| <ID: LETTER (LETTER | DIGIT | "_")*>
+| <LETTER: (["A"-"Z"]|["a"-"z"])>
 }
 
 
