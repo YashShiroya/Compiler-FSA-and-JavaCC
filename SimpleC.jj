@@ -26,7 +26,7 @@ SKIP :
 
 TOKEN :
 {
-| <ID: <LETTER> (<LETTER>|<DIGIT>|"_")*>
+  <ID: <LETTER> (<LETTER>|<DIGIT>|"_")*>
 | <LETTER: (["A"-"Z"]|["a"-"z"])>
 | <DIGIT: ["0"-"9"]>
 | <LPARENT: "(">
