@@ -41,7 +41,7 @@ TOKEN :
 | <EQUAL: "=">
 | <OROR: "||">
 | <ANDAND: "&&">
-| <EQUAL: "=">
+| <EQUALEQUAL: "==">
 
 }
 
