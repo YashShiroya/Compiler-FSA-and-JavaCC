@@ -54,7 +54,6 @@ TOKEN :
 | <TIMES: "*">
 | <DIVIDE: "/">
 | <PERCENT: "%">
-| <PERCENT: "%">
 
 }
 
