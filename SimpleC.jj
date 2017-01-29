@@ -32,16 +32,27 @@ TOKEN :
 | <DIGIT: ["0"-"9"]>
 | <LPARENT: "(">
 | <RPARENT: ")">
-| <LBRACE: "{">
-| <RBRACE: "}">
+| <LCURLY: "{">
+| <RCURLY: "}">
+| <LBRACE: "[">
+| <RBRACE: "]">
 | <COMMA: ",">
 | <SEMICOLON: ";">
 | <EQUAL: "=">
 | <AMPERSAND: "&">
-| <EQUAL: "=">
 | <OROR: "||">
 | <ANDAND: "&&">
 | <EQUALEQUAL: "==">
+| <NOTEQUAL: "!=">
+| <LESS: "<">
+| <GREAT: ">">
+| <LESSEQUAL: "<=">
+| <GREATEQUAL: ">=">
+| <PLUS: "+">
+| <MINUS: "-">
+| <TIMES: "*">
+| <DIVIDE: "/">
+| <PERCENT: "%">
 
 }
 
