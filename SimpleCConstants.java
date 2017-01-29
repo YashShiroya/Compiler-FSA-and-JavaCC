@@ -9,57 +9,57 @@ public interface SimpleCConstants {
   /** End of File. */
   int EOF = 0;
   /** RegularExpression Id. */
-  int ID = 7;
+  int ID = 8;
   /** RegularExpression Id. */
-  int LETTER = 8;
+  int LETTER = 9;
   /** RegularExpression Id. */
-  int DIGIT = 9;
+  int DIGIT = 10;
   /** RegularExpression Id. */
-  int LPARENT = 10;
+  int LPARENT = 11;
   /** RegularExpression Id. */
-  int RPARENT = 11;
+  int RPARENT = 12;
   /** RegularExpression Id. */
-  int LCURLY = 12;
+  int LCURLY = 13;
   /** RegularExpression Id. */
-  int RCURLY = 13;
+  int RCURLY = 14;
   /** RegularExpression Id. */
-  int LBRACE = 14;
+  int LBRACE = 15;
   /** RegularExpression Id. */
-  int RBRACE = 15;
+  int RBRACE = 16;
   /** RegularExpression Id. */
-  int COMMA = 16;
+  int COMMA = 17;
   /** RegularExpression Id. */
-  int SEMICOLON = 17;
+  int SEMICOLON = 18;
   /** RegularExpression Id. */
-  int EQUAL = 18;
+  int EQUAL = 19;
   /** RegularExpression Id. */
-  int AMPERSAND = 19;
+  int AMPERSAND = 20;
   /** RegularExpression Id. */
-  int OROR = 20;
+  int OROR = 21;
   /** RegularExpression Id. */
-  int ANDAND = 21;
+  int ANDAND = 22;
   /** RegularExpression Id. */
-  int EQUALEQUAL = 22;
+  int EQUALEQUAL = 23;
   /** RegularExpression Id. */
-  int NOTEQUAL = 23;
+  int NOTEQUAL = 24;
   /** RegularExpression Id. */
-  int LESS = 24;
+  int LESS = 25;
   /** RegularExpression Id. */
-  int GREAT = 25;
+  int GREAT = 26;
   /** RegularExpression Id. */
-  int LESSEQUAL = 26;
+  int LESSEQUAL = 27;
   /** RegularExpression Id. */
-  int GREATEQUAL = 27;
+  int GREATEQUAL = 28;
   /** RegularExpression Id. */
-  int PLUS = 28;
+  int PLUS = 29;
   /** RegularExpression Id. */
-  int MINUS = 29;
+  int MINUS = 30;
   /** RegularExpression Id. */
-  int TIMES = 30;
+  int TIMES = 31;
   /** RegularExpression Id. */
-  int DIVIDE = 31;
+  int DIVIDE = 32;
   /** RegularExpression Id. */
-  int PERCENT = 32;
+  int PERCENT = 33;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -73,6 +73,7 @@ public interface SimpleCConstants {
     "\"\\r\"",
     "\"\\f\"",
     "<token of kind 6>",
+    "<token of kind 7>",
     "<ID>",
     "<LETTER>",
     "<DIGIT>",

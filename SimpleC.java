@@ -87,7 +87,7 @@ System.out.println("DIGIT, \u005c""+t.image+"\u005c"" ); count++;
       jj_la1_init_1();
    }
    private static void jj_la1_init_0() {
-      jj_la1_0 = new int[] {0xf80,0xf80,};
+      jj_la1_0 = new int[] {0x1f00,0x1f00,};
    }
    private static void jj_la1_init_1() {
       jj_la1_1 = new int[] {0x0,0x0,};
@@ -228,7 +228,7 @@ System.out.println("DIGIT, \u005c""+t.image+"\u005c"" ); count++;
   /** Generate ParseException. */
   static public ParseException generateParseException() {
     jj_expentries.clear();
-    boolean[] la1tokens = new boolean[33];
+    boolean[] la1tokens = new boolean[34];
     if (jj_kind >= 0) {
       la1tokens[jj_kind] = true;
       jj_kind = -1;
@@ -245,7 +245,7 @@ System.out.println("DIGIT, \u005c""+t.image+"\u005c"" ); count++;
         }
       }
     }
-    for (int i = 0; i < 33; i++) {
+    for (int i = 0; i < 34; i++) {
       if (la1tokens[i]) {
         jj_expentry = new int[1];
         jj_expentry[0] = i;
