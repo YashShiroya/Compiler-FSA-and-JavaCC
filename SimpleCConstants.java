@@ -18,6 +18,48 @@ public interface SimpleCConstants {
   int LPARENT = 10;
   /** RegularExpression Id. */
   int RPARENT = 11;
+  /** RegularExpression Id. */
+  int LCURLY = 12;
+  /** RegularExpression Id. */
+  int RCURLY = 13;
+  /** RegularExpression Id. */
+  int LBRACE = 14;
+  /** RegularExpression Id. */
+  int RBRACE = 15;
+  /** RegularExpression Id. */
+  int COMMA = 16;
+  /** RegularExpression Id. */
+  int SEMICOLON = 17;
+  /** RegularExpression Id. */
+  int EQUAL = 18;
+  /** RegularExpression Id. */
+  int AMPERSAND = 19;
+  /** RegularExpression Id. */
+  int OROR = 20;
+  /** RegularExpression Id. */
+  int ANDAND = 21;
+  /** RegularExpression Id. */
+  int EQUALEQUAL = 22;
+  /** RegularExpression Id. */
+  int NOTEQUAL = 23;
+  /** RegularExpression Id. */
+  int LESS = 24;
+  /** RegularExpression Id. */
+  int GREAT = 25;
+  /** RegularExpression Id. */
+  int LESSEQUAL = 26;
+  /** RegularExpression Id. */
+  int GREATEQUAL = 27;
+  /** RegularExpression Id. */
+  int PLUS = 28;
+  /** RegularExpression Id. */
+  int MINUS = 29;
+  /** RegularExpression Id. */
+  int TIMES = 30;
+  /** RegularExpression Id. */
+  int DIVIDE = 31;
+  /** RegularExpression Id. */
+  int PERCENT = 32;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -36,6 +78,27 @@ public interface SimpleCConstants {
     "<DIGIT>",
     "\"(\"",
     "\")\"",
+    "\"{\"",
+    "\"}\"",
+    "\"[\"",
+    "\"]\"",
+    "\",\"",
+    "\";\"",
+    "\"=\"",
+    "\"&\"",
+    "\"||\"",
+    "\"&&\"",
+    "\"==\"",
+    "\"!=\"",
+    "\"<\"",
+    "\">\"",
+    "\"<=\"",
+    "\">=\"",
+    "\"+\"",
+    "\"-\"",
+    "\"*\"",
+    "\"/\"",
+    "\"%\"",
   };
 
 }
