@@ -52,11 +52,11 @@ System.out.println("DIGIT, \u005c""+t.image+"\u005c"" ); count++;
         throw new ParseException();
       }
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case LPARENT:
-      case RPARENT:
       case ID:
       case LETTER:
-      case DIGIT:{
+      case DIGIT:
+      case LPARENT:
+      case RPARENT:{
         ;
         break;
         }

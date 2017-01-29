@@ -9,15 +9,15 @@ public interface SimpleCConstants {
   /** End of File. */
   int EOF = 0;
   /** RegularExpression Id. */
-  int LPARENT = 7;
+  int ID = 7;
   /** RegularExpression Id. */
-  int RPARENT = 8;
+  int LETTER = 8;
   /** RegularExpression Id. */
-  int ID = 9;
+  int DIGIT = 9;
   /** RegularExpression Id. */
-  int LETTER = 10;
+  int LPARENT = 10;
   /** RegularExpression Id. */
-  int DIGIT = 11;
+  int RPARENT = 11;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -31,11 +31,11 @@ public interface SimpleCConstants {
     "\"\\r\"",
     "\"\\f\"",
     "<token of kind 6>",
-    "\"(\"",
-    "\")\"",
     "<ID>",
     "<LETTER>",
     "<DIGIT>",
+    "\"(\"",
+    "\")\"",
   };
 
 }
