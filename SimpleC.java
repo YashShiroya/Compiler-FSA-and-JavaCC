@@ -46,6 +46,11 @@ System.out.println("LETTER, \u005c""+t.image+"\u005c"" ); count++;
 System.out.println("DIGIT, \u005c""+t.image+"\u005c"" ); count++;
         break;
         }
+      case VOID:{
+        t = jj_consume_token(VOID);
+System.out.println("VOID, \u005c""+t.image+"\u005c"" ); count++;
+        break;
+        }
       default:
         jj_la1[0] = jj_gen;
         jj_consume_token(-1);
@@ -54,6 +59,7 @@ System.out.println("DIGIT, \u005c""+t.image+"\u005c"" ); count++;
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
       case LPARENT:
       case RPARENT:
+      case VOID:
       case ID:
       case LETTER:
       case DIGIT:{
@@ -90,7 +96,7 @@ System.out.println("DIGIT, \u005c""+t.image+"\u005c"" ); count++;
       jj_la1_0 = new int[] {0x300,0x300,};
    }
    private static void jj_la1_init_1() {
-      jj_la1_1 = new int[] {0x1c000,0x1c000,};
+      jj_la1_1 = new int[] {0x1c008,0x1c008,};
    }
 
   /** Constructor with InputStream. */

@@ -69,6 +69,7 @@ TOKEN :
 | <ID: <LETTER> (<LETTER>|<DIGIT>|"_")*>
 | <LETTER: (["A"-"Z"]|["a"-"z"])>
 | <DIGIT: ["0"-"9"]>
+| <CHAR_CONST: "," <PRINTING_CHAR> | "\\0" | "\n" | "\r" | "\0" OCTAL OCTAL ","
 
 }
 
@@ -92,8 +93,7 @@ int anytoken():
    t = <RPARENT> { System.out.println("RPARENT, \""+t.image+"\"" ); count++; } | 
    t = <ID> { System.out.println("ID, \""+t.image+"\"" ); count++; } | 
    t = <LETTER> { System.out.println("LETTER, \""+t.image+"\"" ); count++; } | 
-   t = <DIGIT> { System.out.println("DIGIT, \""+t.image+"\"" ); count++; } |
-   t = <VOID> { System.out.println("VOID, \""+t.image+"\"" ); count++; }
+   t = <DIGIT> { System.out.println("DIGIT, \""+t.image+"\"" ); count++; }
   )+
   {return count;}
 }
