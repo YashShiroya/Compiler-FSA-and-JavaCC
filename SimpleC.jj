@@ -70,7 +70,7 @@ TOKEN :
 | <LETTER: (["A"-"Z"]|["a"-"z"])>
 | <DIGIT: ["0"-"9"]>
 | <CHAR_CONST: "," <PRINTING_CHAR> | "\\"("0") | "\n" | "\r" | "\\"("0") <OCTAL> <OCTAL> ",">
-| <STRING_CONST:"\""
+| <STRING_CONST: "\""
                 | "\\"("0") <OCTAL> <OCTAL>
                 | "\\" | ("0") <OCTAL> <OCTAL>
                 | "\\" "x" <HEX_DIGIT> <HEX_DIGIT>
