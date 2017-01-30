@@ -90,6 +90,22 @@ public interface SimpleCConstants {
   int LETTER = 47;
   /** RegularExpression Id. */
   int DIGIT = 48;
+  /** RegularExpression Id. */
+  int CHAR_CONST = 49;
+  /** RegularExpression Id. */
+  int STRING_CONST = 50;
+  /** RegularExpression Id. */
+  int INTEGER_CONST = 51;
+  /** RegularExpression Id. */
+  int DOUBLE_CONST = 52;
+  /** RegularExpression Id. */
+  int PRINTING_CHAR = 53;
+  /** RegularExpression Id. */
+  int OCTAL = 54;
+  /** RegularExpression Id. */
+  int HEX_DIGIT = 55;
+  /** RegularExpression Id. */
+  int OTHER_CHAR = 56;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -145,6 +161,14 @@ public interface SimpleCConstants {
     "<ID>",
     "<LETTER>",
     "<DIGIT>",
+    "<CHAR_CONST>",
+    "<STRING_CONST>",
+    "<INTEGER_CONST>",
+    "<DOUBLE_CONST>",
+    "<PRINTING_CHAR>",
+    "<OCTAL>",
+    "<HEX_DIGIT>",
+    "<OTHER_CHAR>",
   };
 
 }
