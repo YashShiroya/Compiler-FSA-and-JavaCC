@@ -60,6 +60,36 @@ public interface SimpleCConstants {
   int DIVIDE = 32;
   /** RegularExpression Id. */
   int PERCENT = 33;
+  /** RegularExpression Id. */
+  int CHARSTARSTAR = 34;
+  /** RegularExpression Id. */
+  int CHARSTAR = 35;
+  /** RegularExpression Id. */
+  int LONGSTAR = 36;
+  /** RegularExpression Id. */
+  int LONG = 37;
+  /** RegularExpression Id. */
+  int VOID = 38;
+  /** RegularExpression Id. */
+  int IF = 39;
+  /** RegularExpression Id. */
+  int ELSE = 40;
+  /** RegularExpression Id. */
+  int WHILE = 41;
+  /** RegularExpression Id. */
+  int DO = 42;
+  /** RegularExpression Id. */
+  int FOR = 43;
+  /** RegularExpression Id. */
+  int CONTINUE = 44;
+  /** RegularExpression Id. */
+  int BREAK = 45;
+  /** RegularExpression Id. */
+  int RETURN = 46;
+  /** RegularExpression Id. */
+  int DOUBLESTAR = 47;
+  /** RegularExpression Id. */
+  int DOUBLE = 48;
 
   /** Lexical state. */
   int DEFAULT = 0;
@@ -100,6 +130,21 @@ public interface SimpleCConstants {
     "\"*\"",
     "\"/\"",
     "\"%\"",
+    "\"char**\"",
+    "\"char*\"",
+    "\"long*\"",
+    "\"long\"",
+    "\"void\"",
+    "\"if\"",
+    "\"else\"",
+    "\"while\"",
+    "\"do\"",
+    "\"for\"",
+    "\"continue\"",
+    "\"break\"",
+    "\"return\"",
+    "\"double*\"",
+    "\"double\"",
   };
 
 }
