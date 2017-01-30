@@ -78,7 +78,7 @@ TOKEN :
                 | "\\" ("n"|"t"|"r"|"0")
                 )* "\""> 
 | <INTEGER_CONST: <DIGIT> (<DIGIT>)* | <DIGIT> (<DIGIT>)* "_" <HEX_DIGIT> (<HEX_DIGIT>)*>
-| <DOUBLE_CONST: (<DIGIT>)* "."? <DIGIT> (<DIGIT>)* (("e" | "E") ("-" | "+")? <DIGIT> (<DIGIT>)*)?>
+| <DOUBLE_CONST: (<DIGIT>)* (".")? <DIGIT> (<DIGIT>)* (("e" | "E") ("-" | "+")? <DIGIT> (<DIGIT>)*)?>
 
 }
 
