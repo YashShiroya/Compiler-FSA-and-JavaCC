@@ -79,7 +79,16 @@ TOKEN :
                 )* "\""> 
 | <INTEGER_CONST: <DIGIT> (<DIGIT>)* | <DIGIT> (<DIGIT>)* "_" <HEX_DIGIT> (<HEX_DIGIT>)*>
 | <DOUBLE_CONST: (<DIGIT>)* (".")? <DIGIT> (<DIGIT>)* (("e" | "E") ("-" | "+")? <DIGIT> (<DIGIT>)*)?>
-
+| <PRINTING_CHAR: <LETTER> | <DIGIT> | <OTHER_CHAR>>
+| <OCTAL: "0" | "1" | ... | "7">
+| <HEX_DIGIT:<DIGIT>>
+          | "A" | "B" | "C" | "D" | "E" | "F"
+          | "a" | "b" | "c" | "d" | "e" | "f">
+| <OTHER_CHAR
+  " " | "!" | "#" | "$" | "%" | "&" | "(" | ")"
+| "*" | "+" | "," | "-" | "." | "/" | ":" | ";"
+| "<" | "=" | ">" | "?" | "@" | "[" | "]" | "^"
+| "_" | "`" | "{" | "|" | "}" | "~">
 }
 
 
