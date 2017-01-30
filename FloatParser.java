@@ -208,7 +208,7 @@ class FloatParser {
         value *= Math.pow(10, e_val);
     }
 
-    if()
+    // if()
     return value;
 
 }
