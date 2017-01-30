@@ -69,11 +69,10 @@ TOKEN :
 | <ID: <LETTER> (<LETTER>|<DIGIT>|"_")*>
 | <LETTER: (["A"-"Z"]|["a"-"z"])>
 | <DIGIT: ["0"-"9"]>
-| <CHAR_CONST: "," <PRINTING_CHAR> | "\\"("0") | "\n" | "\r" | "\\"("0") <OCTAL> <OCTAL> ",">
+| <CHAR_CONST: "'" (<PRINTING_CHAR> | "\\"("0") | "\\" ("n") | "\\" ("r") | "\\" ("0") <OCTAL> <OCTAL>) "'">
 | <STRING_CONST: "\"" (
                 <PRINTING_CHAR>
-                | "\\"("0") <OCTAL> <OCTAL>
-                | "\\" | ("0") <OCTAL> <OCTAL>
+                | "\\" ("0") <OCTAL> <OCTAL>
                 | "\\" "x" <HEX_DIGIT> <HEX_DIGIT>
                 | "\\" ("n"|"t"|"r"|"0")
                 )* "\""> 
@@ -81,7 +80,7 @@ TOKEN :
 | <DOUBLE_CONST: (<DIGIT>)* (".")? <DIGIT> (<DIGIT>)* (("e" | "E") ("-" | "+")? <DIGIT> (<DIGIT>)*)?>
 | <PRINTING_CHAR: <LETTER> | <DIGIT> | <OTHER_CHAR>>
 | <OCTAL: ["0"-"7"]>
-| <HEX_DIGIT:<DIGIT>
+| <HEX_DIGIT: <DIGIT>
             | ("A") | ("B") | ("C") | ("D") | ("E") | ("F")
             | ("a") | ("b") | ("c") | ("d") | ("e") | ("f")>
 | <OTHER_CHAR: (" ") | ("!") | ("#") | ("$") | ("%") | ("&") | ("(") | (")")
