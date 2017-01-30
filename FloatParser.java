@@ -142,12 +142,14 @@ class FloatParser {
                 state = StateFloat.S7;
                 ePower = EPower.E_POSITIVE;
                 i++;
+                checkTrueEnd(s_len, i);
             }
 
             else if(ch == '-') {
                 state = StateFloat.S7;
                 ePower = EPower.E_NEGETIVE;
                 i++;
+                checkTrueEnd(s_len, i);
             }
 
             else if(Character.isDigit(ch)) {
@@ -166,6 +168,7 @@ class FloatParser {
                 state = StateFloat.S5;
                 e_exists = true;
                 i++;
+                checkTrueEnd(s_len, i);
             }
 
             else if(Character.isDigit(ch)) {
