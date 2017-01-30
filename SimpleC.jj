@@ -69,7 +69,7 @@ TOKEN :
 | <ID: <LETTER> (<LETTER>|<DIGIT>|"_")*>
 | <LETTER: (["A"-"Z"]|["a"-"z"])>
 | <DIGIT: ["0"-"9"]>
-| <CHAR_CONST: "," <PRINTING_CHAR> | "\\"("0") | "\n" | "\r" | "\\"("0") OCTAL OCTAL ",">
+| <CHAR_CONST: "," <PRINTING_CHAR> | "\\" ("0") | "\n" | "\r" | "\\" ("0") OCTAL OCTAL ",">
 
 }
 
