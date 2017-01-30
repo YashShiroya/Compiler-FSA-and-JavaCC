@@ -52,11 +52,11 @@ System.out.println("DIGIT, \u005c""+t.image+"\u005c"" ); count++;
         throw new ParseException();
       }
       switch ((jj_ntk==-1)?jj_ntk_f():jj_ntk) {
-      case LETTER:
-      case DIGIT:
       case LPARENT:
       case RPARENT:
-      case ID:{
+      case ID:
+      case LETTER:
+      case DIGIT:{
         ;
         break;
         }
@@ -87,10 +87,10 @@ System.out.println("DIGIT, \u005c""+t.image+"\u005c"" ); count++;
       jj_la1_init_1();
    }
    private static void jj_la1_init_0() {
-      jj_la1_0 = new int[] {0xf00,0xf00,};
+      jj_la1_0 = new int[] {0x300,0x300,};
    }
    private static void jj_la1_init_1() {
-      jj_la1_1 = new int[] {0x10000,0x10000,};
+      jj_la1_1 = new int[] {0x1c000,0x1c000,};
    }
 
   /** Constructor with InputStream. */
