@@ -16,6 +16,10 @@ class FloatParser {
  enum Sign { POSITIVE, NEGETIVE };
  enum EPower { E_POSITIVE, E_NEGETIVE, E_DEFAULT };
 
+ public checkTrueEnd(int slength, int index) {
+    // if(slength >= index)
+ }
+
  public static double MyParseFloat(String s) throws Exception {
         // Using the code in DecimalParser.java write a finite state 
         // machine that parses a floating point number of the form 
@@ -54,7 +58,7 @@ class FloatParser {
                 sign = Sign.POSITIVE;
                 state = StateFloat.S2;
                 i++;
-                if(s_len >= i) {
+                if(s_len <= i) {
                     throw new Exception("Bad format");
                 }
             }
