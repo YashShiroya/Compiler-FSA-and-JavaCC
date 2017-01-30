@@ -16,7 +16,7 @@ class FloatParser {
  enum Sign { POSITIVE, NEGETIVE };
  enum EPower { E_POSITIVE, E_NEGETIVE, E_DEFAULT };
 
- public void checkTrueEnd(int s_length, int index) {
+ public static void checkTrueEnd(int s_length, int index) {
     if(index >= s_length) {
         throw new Exception("Bad format");
     }
