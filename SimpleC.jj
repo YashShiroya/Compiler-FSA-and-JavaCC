@@ -154,7 +154,7 @@ int anytoken():
     t = <PRINTING_CHAR> { System.out.println("PRINTING_CHAR, \""+t.image+"\"" ); count++; } |
     t = <OCTAL> { System.out.println("OCTAL, \""+t.image+"\"" ); count++; } |
     t = <HEX_DIGIT> { System.out.println("HEX_DIGIT, \""+t.image+"\"" ); count++; } |
-    t = <OTHER_CHAR> { System.out.println("OTHER_CHAR, \""+t.image+"\"" ); count++; } |
+    t = <OTHER_CHAR> { System.out.println("OTHER_CHAR, \""+t.image+"\"" ); count++; }
   )+
   {return count;}
 }
