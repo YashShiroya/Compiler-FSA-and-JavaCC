@@ -67,11 +67,13 @@ class FloatParser {
                 sign = Sign.NEGETIVE;
                 state = StateFloat.S2;
                 i++;
+                checkTrueEnd(s_len, i);
             }
 
             else if(ch == '.') {
                 state = StateFloat.S4;
                 i++;
+                checkTrueEnd(s_len, i);
             }
 
             else throw new Exception("Bad format");
