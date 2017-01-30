@@ -69,14 +69,15 @@ TOKEN :
 | <ID: <LETTER> (<LETTER>|<DIGIT>|"_")*>
 | <LETTER: (["A"-"Z"]|["a"-"z"])>
 | <DIGIT: ["0"-"9"]>
-| <CHAR_CONST: "," <PRINTING_CHAR> | "\\"("0") | "\n" | "\r" | "\\"("0") OCTAL OCTAL ",">
-| <STRING_CONST: "\"" (
-| <PRINTING_CHAR:"\""
-                | "\\"("0") OCTAL OCTAL
-                | "\\" | ("0") OCTAL OCTAL
-                | "\\" "x" HEX_DIGIT HEX_DIGIT
+| <CHAR_CONST: "," <PRINTING_CHAR> | "\\"("0") | "\n" | "\r" | "\\"("0") <OCTAL> <OCTAL> ",">
+| <STRING_CONST:"\""
+                | "\\"("0") <OCTAL> <OCTAL>
+                | "\\" | ("0") <OCTAL> <OCTAL>
+                | "\\" "x" <HEX_DIGIT> <HEX_DIGIT>
                 | "\\" ("n"|"t"|"r"|"0")
-                )* "\""
+                )* "\"">
+| <INTEGER_CONST: <DIGIT> (<DIGIT>)* | <DIGIT> (<DIGIT>)* "_" <HEX_DIGIT> (<HEX_DIGIT>)*>
+| <DOUBLE_CONST: (<DIGIT>)* "."? <DIGIT> (<DIGIT>)* (("e" | "E") ("-" | "+")? <DIGIT> (<DIGIT>)*)?>
 
 }
 
