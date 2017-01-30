@@ -16,7 +16,7 @@ class FloatParser {
  enum Sign { POSITIVE, NEGETIVE };
  enum EPower { E_POSITIVE, E_NEGETIVE, E_DEFAULT };
 
- public static void checkTrueEnd(int s_length, int index) throws Exception{
+ public static void checkTrueEnd(int s_length, int index) throws Exception {
     if(index >= s_length) {
         throw new Exception("Bad format");
     }
@@ -90,6 +90,7 @@ class FloatParser {
             else if(ch == '.') {
                 state = StateFloat.S4;
                 i++;
+                checkTrueEnd(s_len, i);
             }
 
             else throw new Exception("Bad format");
@@ -107,11 +108,13 @@ class FloatParser {
             else if(ch == '.') {
                 state = StateFloat.S4;
                 i++;
+                checkTrueEnd(s_len, i);
             }
             else if(ch == 'e' || ch == 'E') {
                 state = StateFloat.S5;
                 e_exists = true;
                 i++;
+                checkTrueEnd(s_len, i);
             }
 
             //else state = StateFloat.S_END;
