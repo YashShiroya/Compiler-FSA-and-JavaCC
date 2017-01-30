@@ -16,7 +16,7 @@ class FloatParser {
  enum Sign { POSITIVE, NEGETIVE };
  enum EPower { E_POSITIVE, E_NEGETIVE, E_DEFAULT };
 
- public checkTrueEnd(int slength, int index) {
+ public void checkTrueEnd(int slength, int index) {
     // if(slength >= index)
  }
 
