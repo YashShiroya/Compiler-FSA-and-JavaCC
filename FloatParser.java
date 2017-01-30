@@ -54,6 +54,9 @@ class FloatParser {
                 sign = Sign.POSITIVE;
                 state = StateFloat.S2;
                 i++;
+                if(s_len >= i) {
+                    throw new Exception("Bad format");
+                }
             }
 
             else if(ch == '-') {
@@ -205,6 +208,7 @@ class FloatParser {
         value *= Math.pow(10, e_val);
     }
 
+    if()
     return value;
 
 }
