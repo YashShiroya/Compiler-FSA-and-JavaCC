@@ -54,6 +54,21 @@ TOKEN :
 | <TIMES: "*">
 | <DIVIDE: "/">
 | <PERCENT: "%">
+| <CHARSTARSTAR: "char**">
+| <CHARSTAR: "char*">
+| <LONGSTAR: "long*">
+| <LONG: "long">
+| <VOID: "void">
+| <IF: "if">
+| <ELSE: "else">
+| <WHILE: "while">
+| <DO: "do">
+| <FOR: "for">
+| <CONTINUE: "continue">
+| <BREAK: "break">
+| <RETURN: "return">
+| <DOUBLESTAR: "double*">
+| <DOUBLE: "double">
 
 }
 
