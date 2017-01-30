@@ -16,8 +16,10 @@ class FloatParser {
  enum Sign { POSITIVE, NEGETIVE };
  enum EPower { E_POSITIVE, E_NEGETIVE, E_DEFAULT };
 
- public void checkTrueEnd(int slength, int index) {
-    // if(slength >= index)
+ public void checkTrueEnd(int s_length, int index) {
+    if(index >= s_length) {
+        throw new Exception("Bad format");
+    }
  }
 
  public static double MyParseFloat(String s) throws Exception {
@@ -58,9 +60,7 @@ class FloatParser {
                 sign = Sign.POSITIVE;
                 state = StateFloat.S2;
                 i++;
-                if(s_len <= i) {
-                    throw new Exception("Bad format");
-                }
+                checkTrueEnd(s_len, i);
             }
 
             else if(ch == '-') {
@@ -212,7 +212,6 @@ class FloatParser {
         value *= Math.pow(10, e_val);
     }
 
-    // if()
     return value;
 
 }
