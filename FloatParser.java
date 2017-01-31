@@ -221,7 +221,7 @@ class FloatParser {
     }
 
     if(state == StateFloat.S3_ACCEPT || state == StateFloat.S6_ACCEPT || state == StateFloat.S8_ACCEPT) {
-        return value; s
+        return value;
     }
     else {
         throw new Exception("Bad format");
