@@ -220,7 +220,13 @@ class FloatParser {
         value *= Math.pow(10, e_val);
     }
 
-    return value;
+    if(state == StateFloat.S3_ACCEPT || state == StateFloat.S6_ACCEPT || state == StateFloat.S8_ACCEPT) {
+        return value; s
+    }
+    else {
+        throw new Exception("Bad format");
+    }
+    
 
 }
 
