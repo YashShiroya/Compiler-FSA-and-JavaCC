@@ -21,7 +21,7 @@ SKIP :
 | "\n"
 | "\r"
 | "\f"
-| <"//" (~["\r","\n"])* ("\r"|"\n")>
+| <"//" (~["\r","\n"])* ("\r"|"\n"|"\r\n")>
 | <"/*" (~[])* "*/">
 }
 
@@ -37,15 +37,15 @@ TOKEN :
 | <COMMA: ",">
 | <SEMICOLON: ";">
 | <EQUAL: "=">
+| <ANDAND: "&&">
 | <AMPERSAND: "&">
 | <OROR: "||">
-| <ANDAND: "&&">
 | <EQUALEQUAL: "==">
 | <NOTEQUAL: "!=">
-| <LESS: "<">
-| <GREAT: ">">
 | <LESSEQUAL: "<=">
 | <GREATEQUAL: ">=">
+| <LESS: "<">
+| <GREAT: ">">
 | <PLUS: "+">
 | <MINUS: "-">
 | <TIMES: "*">
@@ -67,8 +67,6 @@ TOKEN :
 | <DOUBLESTAR: "double*">
 | <DOUBLE: "double">
 | <ID: <LETTER> (<LETTER>|<DIGIT>|"_")*>
-| <LETTER: (["A"-"Z"]|["a"-"z"])>
-| <DIGIT: ["0"-"9"]>
 | <CHAR_CONST: "'" (<PRINTING_CHAR> | "\\"("0") | "\\" ("n") | "\\" ("r") | "\\" ("0") <OCTAL> <OCTAL>) "'">
 | <STRING_CONST: "\"" (
                 <PRINTING_CHAR>
@@ -79,6 +77,8 @@ TOKEN :
 | <INTEGER_CONST: <DIGIT> (<DIGIT>)* | <DIGIT> (<DIGIT>)* "_" <HEX_DIGIT> (<HEX_DIGIT>)*>
 | <DOUBLE_CONST: (<DIGIT>)* (".")? <DIGIT> (<DIGIT>)* (("e" | "E") ("-" | "+")? <DIGIT> (<DIGIT>)*)?>
 | <PRINTING_CHAR: <LETTER> | <DIGIT> | <OTHER_CHAR>>
+| <LETTER: (["A"-"Z"]|["a"-"z"])>
+| <DIGIT: ["0"-"9"]>
 | <OCTAL: ["0"-"7"]>
 | <HEX_DIGIT: <DIGIT>
             | ("A") | ("B") | ("C") | ("D") | ("E") | ("F")
