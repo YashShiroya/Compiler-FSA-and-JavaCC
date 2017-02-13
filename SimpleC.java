@@ -281,15 +281,15 @@ System.out.println("OTHER_CHAR, \u005c""+t.image+"\u005c"" ); count++;
       case COMMA:
       case SEMICOLON:
       case EQUAL:
+      case ANDAND:
       case AMPERSAND:
       case OROR:
-      case ANDAND:
       case EQUALEQUAL:
       case NOTEQUAL:
-      case LESS:
-      case GREAT:
       case LESSEQUAL:
       case GREATEQUAL:
+      case LESS:
+      case GREAT:
       case PLUS:
       case MINUS:
       case TIMES:
@@ -311,13 +311,13 @@ System.out.println("OTHER_CHAR, \u005c""+t.image+"\u005c"" ); count++;
       case DOUBLESTAR:
       case DOUBLE:
       case ID:
-      case LETTER:
-      case DIGIT:
       case CHAR_CONST:
       case STRING_CONST:
       case INTEGER_CONST:
       case DOUBLE_CONST:
       case PRINTING_CHAR:
+      case LETTER:
+      case DIGIT:
       case OCTAL:
       case HEX_DIGIT:
       case OTHER_CHAR:{

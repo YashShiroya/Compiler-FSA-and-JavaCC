@@ -27,23 +27,23 @@ public interface SimpleCConstants {
   /** RegularExpression Id. */
   int EQUAL = 16;
   /** RegularExpression Id. */
-  int AMPERSAND = 17;
+  int ANDAND = 17;
   /** RegularExpression Id. */
-  int OROR = 18;
+  int AMPERSAND = 18;
   /** RegularExpression Id. */
-  int ANDAND = 19;
+  int OROR = 19;
   /** RegularExpression Id. */
   int EQUALEQUAL = 20;
   /** RegularExpression Id. */
   int NOTEQUAL = 21;
   /** RegularExpression Id. */
-  int LESS = 22;
+  int LESSEQUAL = 22;
   /** RegularExpression Id. */
-  int GREAT = 23;
+  int GREATEQUAL = 23;
   /** RegularExpression Id. */
-  int LESSEQUAL = 24;
+  int LESS = 24;
   /** RegularExpression Id. */
-  int GREATEQUAL = 25;
+  int GREAT = 25;
   /** RegularExpression Id. */
   int PLUS = 26;
   /** RegularExpression Id. */
@@ -87,19 +87,19 @@ public interface SimpleCConstants {
   /** RegularExpression Id. */
   int ID = 46;
   /** RegularExpression Id. */
-  int LETTER = 47;
+  int CHAR_CONST = 47;
   /** RegularExpression Id. */
-  int DIGIT = 48;
+  int STRING_CONST = 48;
   /** RegularExpression Id. */
-  int CHAR_CONST = 49;
+  int INTEGER_CONST = 49;
   /** RegularExpression Id. */
-  int STRING_CONST = 50;
+  int DOUBLE_CONST = 50;
   /** RegularExpression Id. */
-  int INTEGER_CONST = 51;
+  int PRINTING_CHAR = 51;
   /** RegularExpression Id. */
-  int DOUBLE_CONST = 52;
+  int LETTER = 52;
   /** RegularExpression Id. */
-  int PRINTING_CHAR = 53;
+  int DIGIT = 53;
   /** RegularExpression Id. */
   int OCTAL = 54;
   /** RegularExpression Id. */
@@ -129,15 +129,15 @@ public interface SimpleCConstants {
     "\",\"",
     "\";\"",
     "\"=\"",
+    "\"&&\"",
     "\"&\"",
     "\"||\"",
-    "\"&&\"",
     "\"==\"",
     "\"!=\"",
-    "\"<\"",
-    "\">\"",
     "\"<=\"",
     "\">=\"",
+    "\"<\"",
+    "\">\"",
     "\"+\"",
     "\"-\"",
     "\"*\"",
@@ -159,13 +159,13 @@ public interface SimpleCConstants {
     "\"double*\"",
     "\"double\"",
     "<ID>",
-    "<LETTER>",
-    "<DIGIT>",
     "<CHAR_CONST>",
     "<STRING_CONST>",
     "<INTEGER_CONST>",
     "<DOUBLE_CONST>",
     "<PRINTING_CHAR>",
+    "<LETTER>",
+    "<DIGIT>",
     "<OCTAL>",
     "<HEX_DIGIT>",
     "<OTHER_CHAR>",
